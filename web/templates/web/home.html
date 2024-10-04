@@ -3,17 +3,7 @@
 
 {% block content %}
 <div class="col-md-6 offset-md-3">
-<h1>Login</h1>
-<form method = "POST" action={% url 'home' %}>
-    {% csrf_token %}
-    <div class="mb-3">
-      <input type="text" class="form-control" name="username" placeholder="enter your username">
-    </div>
-    <div class="mb-3">
-      <input type="password" class="form-control" name="password" placeholder="enter your password">
-    </div>
-    <button type="submit" class="btn btn-secondary">Login</button>
-  </form>
+<h1>Welcome {{user.username}}!</h1>
 
 </div>
 {% endblock %}
